@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Assignment2_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="130" height="43" alignment="left" text="Car " textAlignment="center" id="Z96-vL-Ixx">
+                            <color key="textColor" red="1" green="0.33113337409999999" blue="0.31007071660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <button width="1" alignment="left" title="Details" id="eaC-Lg-Zwn">
+                            <color key="titleColor" red="0.12819355693205059" green="0.083288733703939438" blue="0.41191709844559588" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.9973226718" green="1" blue="0.83590337699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="rlW-o6-IdD" kind="modal" id="Rml-hg-SUu"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="173" y="217"/>
+        </scene>
+        <!--Program Interface Controller-->
+        <scene sceneID="7uH-As-eet">
+            <objects>
+                <controller id="rlW-o6-IdD" customClass="ProgramInterfaceController" customModule="Assignment2_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Information" textAlignment="center" id="qKa-YL-Baz">
+                            <color key="textColor" red="1" green="0.33113337409999999" blue="0.31007071660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <table alignment="left" id="aFZ-Fd-fde">
+                            <items>
+                                <tableRow identifier="ProgRowController" id="bz2-Vs-jzx" customClass="ProgRowController" customModule="Assignment2_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="155" alignment="left" layout="vertical" id="qgd-3v-Tlq">
+                                        <items>
+                                            <label alignment="left" text="Label" id="l4g-7Z-4gc">
+                                                <color key="textColor" red="1" green="0.074686847079999993" blue="0.22427762649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label alignment="left" text="Label" id="DJy-lD-PXe">
+                                                <color key="textColor" red="1" green="0.72083278500000003" blue="0.1212522912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label width="125" alignment="left" text="Label" id="8tR-T4-lPo">
+                                                <color key="textColor" red="0.41729283509999998" green="1" blue="0.87030239570000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <group width="1" alignment="left" layout="vertical" id="D9r-53-jTC">
+                                                <items>
+                                                    <label width="135" alignment="left" text="Label" id="TfA-fK-XyV">
+                                                        <color key="textColor" red="1" green="0.38183919669999999" blue="0.88853504270000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" layout="vertical" id="fq1-hY-35m">
+                                                <items>
+                                                    <label width="129" alignment="left" text="Label" id="bBS-2I-J4P">
+                                                        <color key="textColor" red="0.9973226718" green="1" blue="0.83590337699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </label>
+                                                    <label width="128" height="21" alignment="left" text="Label" id="KoY-mV-sh3">
+                                                        <color key="textColor" red="1" green="0.33113337409999999" blue="0.31007071660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblColour" destination="KoY-mV-sh3" id="0f2-aI-ewE"/>
+                                        <outlet property="lblMake" destination="l4g-7Z-4gc" id="rXl-jR-dzV"/>
+                                        <outlet property="lblModel" destination="DJy-lD-PXe" id="JQN-m1-rJh"/>
+                                        <outlet property="lblNew_Used" destination="8tR-T4-lPo" id="xZN-9k-r1H"/>
+                                        <outlet property="lblPrice" destination="bBS-2I-J4P" id="52Z-YK-mut"/>
+                                        <outlet property="lblYear" destination="TfA-fK-XyV" id="pqG-XI-cpc"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="progTable" destination="aFZ-Fd-fde" id="F7l-kj-uzv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="231"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Assignment2_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Assignment2_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="622"/>
+        </scene>
+    </scenes>
+</document>
